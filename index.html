@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/icons8-apple-logo-48.png"
+      type="image/x-icon"
+    />
+
+    <title>Tip Calculator App</title>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1 class="title">
+      SPLI <br />
+      TTER
+    </h1>
+    <main class="main">
+      <!-- left container start -->
+
+      <div class="left-container">
+        <label for="bill" class="input-title">Bill</label>
+        <input type="number" id="bill" name="bill" class="tip-input" />
+        <p class="input-title">Select Tip %</p>
+        <div class="tips-container">
+          <input
+            type="button"
+            value="5"
+            name="tip-percentage"
+            class="tip-percentage"
+          />
+          <input
+            type="button"
+            value="10"
+            name="tip-percentage"
+            class="tip-percentage"
+          />
+          <input
+            type="button"
+            value="15"
+            name="tip-percentage"
+            class="tip-percentage"
+          />
+          <input
+            type="button"
+            value="25"
+            name="tip-percentage"
+            class="tip-percentage"
+          />
+          <input
+            type="button"
+            value="50"
+            name="tip-percentage"
+            class="tip-percentage"
+          />
+          <input
+            type="number"
+            placeholder="Custom"
+            name="tip-percentage"
+            class="custom-tip"
+            id="custom-input"
+          />
+        </div>
+        <div class="people-container">
+          <p class="input-title">Number Of People</p>
+          <p class="error-msg" id="error">Can't be zero</p>
+        </div>
+        <input
+          type="number"
+          name="people"
+          class="people-input"
+          id="people-input"
+        />
+      </div>
+
+      <!-- left container end -->
+
+      <!-- right container start -->
+
+      <div class="right-container">
+        <div class="tip-amount">
+          <p class="para-left">
+            <span>Tip-Amount</span> <br />
+            / Person
+          </p>
+          <p class="para-right" id="amount">$4.27</p>
+        </div>
+        <div class="tip-amount">
+          <p class="para-left">
+            <span>Total</span> <br />
+            / Person
+          </p>
+          <p class="para-right" id="total">$32.79</p>
+        </div>
+        <button class="btn-reset" id="btn-reset">RESET</button>
+      </div>
+
+      <!-- right container end -->
+    </main>
+    <!-- Custom JavaScript -->
+    <script src="./script/script.js"></script>
+  </body>
+</html>

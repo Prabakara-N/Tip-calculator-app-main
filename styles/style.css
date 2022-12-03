@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --clr-Very-dark-cyan: #00494d;
+  --clr-Dark-grayish-cyan: #5e7a7d;
+  --clr-Grayish-cyan: #7f9c9f;
+  --clr-Light-grayish-cyan: #c5e4e7;
+  --clr-Very-light-grayish-cyan: #f4fafa;
+  --clr-White: #ffffff;
+  --clr-Strong-cyan: #26c0ab;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--clr-Light-grayish-cyan);
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.title {
+  color: #00494d;
+}
+
+.main {
+  background-color: #ffffff;
+  min-width: 97%;
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* left container start */
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-title {
+  color: #7f9c9f;
+  font-size: 0.8rem;
+  padding-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.tip-input,
+.people-input {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 2rem;
+  border: none;
+  color: #00494d;
+  border-radius: 7px;
+  background-color: var(--clr-Very-light-grayish-cyan);
+  margin-bottom: 1.25rem;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tip-input {
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 10px;
+  cursor: pointer;
+}
+
+.people-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-msg {
+  display: none;
+  color: orangered;
+  font-size: 0.8rem;
+  padding-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.people-input {
+  background-image: url(../images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 10px;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+
+.tip-input:hover {
+  border: 2px solid var(--clr-Strong-cyan);
+}
+
+.people-input:hover {
+  border: 2px solid var(--clr-Strong-cyan);
+}
+
+.tips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 19rem;
+  margin: auto;
+  margin-bottom: 1.25rem;
+  padding-top: 8px;
+}
+
+.tips-container input {
+  width: 9rem;
+  height: 3rem;
+
+  font-size: 1.1rem;
+}
+
+.tip-percentage {
+  font-weight: bold;
+  background-color: var(--clr-Very-dark-cyan);
+  color: #ffffff;
+  border-radius: 9px;
+}
+
+.tip-percentage:hover {
+  background-color: var(--clr-Strong-cyan);
+  color: var(--clr-Very-dark-cyan);
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.custom-tip {
+  font-weight: 700;
+  padding-left: 9px;
+  border-radius: 9px;
+  border: 2px solid var(--clr-Strong-cyan);
+  background-color: var(--clr-Very-light-grayish-cyan);
+  color: var(--clr-Very-dark-cyan);
+  cursor: pointer;
+}
+
+/* left container end */
+
+/* right container start */
+
+.right-container {
+  background-color: var(--clr-Very-dark-cyan);
+  padding: 1rem;
+  border-radius: 14px;
+  margin-top: 0.5rem;
+}
+
+.tip-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+span {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.para-left {
+  font-size: 0.9rem;
+  color: var(--clr-Grayish-cyan);
+}
+
+.para-right {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #0becce;
+}
+
+.btn-reset {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--clr-Strong-cyan);
+  color: var(--clr-Very-dark-cyan);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-reset:hover {
+  background-color: #0becce;
+  transition: 0.3s;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* right container end */
+
+/* media quoery */
+@media screen and (min-width: 520px) {
+  .main {
+    width: 85%;
+    margin: auto;
+  }
+
+  .tips-container {
+    width: 29rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .tips-container {
+    width: 19rem;
+  }
+
+  .left-container {
+    width: 50%;
+  }
+
+  .right-container {
+    width: 50%;
+  }
+
+  .btn-reset {
+    margin-top: 12.75rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    max-width: 75%;
+    min-width: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+  }
+
+  .input-title {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .tip-input {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+  }
+
+  .people-input {
+    padding-left: 2rem;
+  }
+
+  .tips-container {
+    margin-top: -0.1rem;
+    width: 23rem;
+  }
+
+  .tips-container input {
+    width: 7rem;
+    height: 3.5rem;
+    font-size: 1.4rem;
+  }
+
+  .tip-amount {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .error-msg {
+    margin-top: 1.25rem;
+  }
+
+  .right-container {
+    margin: 1px auto;
+    margin-left: 4.5rem;
+  }
+
+  span {
+    font-size: 1.1rem;
+  }
+
+  .para-left {
+    font-size: 1rem;
+  }
+
+  .para-right {
+    font-size: 2.25rem;
+  }
+
+  .btn-reset {
+    font-size: 1.15rem;
+    margin-top: 12.5rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .tips-container {
+    width: 29rem;
+  }
+
+  .tips-container input {
+    width: 9rem;
+  }
+}
