@@ -111,5 +111,4 @@ btnReset.addEventListener("click", function () {
   billInputEl.style.border = "none";
   init();
 });
-
 init();
