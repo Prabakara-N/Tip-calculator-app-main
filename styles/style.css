@@ -79,6 +79,7 @@ body {
   background-repeat: no-repeat;
   background-position: 10px;
   cursor: pointer;
+  outline-style: none;
 }
 
 .people-container {
@@ -100,14 +101,7 @@ body {
   background-position: 10px;
   padding-left: 2rem;
   cursor: pointer;
-}
-
-.tip-input:hover {
-  border: 2px solid var(--clr-Strong-cyan);
-}
-
-.people-input:hover {
-  border: 2px solid var(--clr-Strong-cyan);
+  outline-style: none;
 }
 
 .tips-container {
@@ -123,8 +117,9 @@ body {
 .tips-container input {
   width: 9rem;
   height: 3rem;
-
   font-size: 1.1rem;
+  border: none;
+  outline-style: none;
 }
 
 .tip-percentage {
@@ -150,6 +145,7 @@ body {
   background-color: var(--clr-Very-light-grayish-cyan);
   color: var(--clr-Very-dark-cyan);
   cursor: pointer;
+  outline-style: none;
 }
 
 /* left container end */
