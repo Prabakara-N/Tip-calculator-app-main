@@ -36,6 +36,7 @@ function calBills(tipPercent) {
   if (persons === 0 || persons < 0) {
     errorEl.style.display = "block";
     personInputEl.style.border = "2px solid orangered";
+    billInputEl.style.border = "2px solid var(--clr-Strong-cyan)";
 
     amountEl.innerText = `$0.00`;
     totalEl.innerText = `$0.00`;
@@ -50,7 +51,6 @@ function calBills(tipPercent) {
 
     //if we re-enter the value >0
     errorEl.style.display = "none";
-    billInputEl.style.outlineStyle = "none";
 
     //showing output
     amountEl.innerText = "$" + tipPerPerson.toFixed(2);
@@ -66,6 +66,9 @@ function calBills(tipPercent) {
 for (let i = 0; i < tipInputEl.length; i++) {
   tipInputEl[i].addEventListener("click", function () {
     tipPercent = Number(this.value) / 100;
+    billInputEl.style.border = "none";
+    customInputEl.style.border = "none";
+    personInputEl.style.border = "none";
     calBills(tipPercent);
   });
 }
@@ -74,6 +77,9 @@ for (let i = 0; i < tipInputEl.length; i++) {
 customInputEl.addEventListener("change", function () {
   tipPercent = Number(this.value) / 100;
   this.value = null;
+  billInputEl.style.border = "none";
+  this.style.border = "none";
+  personInputEl.style.border = "none";
 
   calBills(tipPercent);
 });
@@ -99,6 +105,7 @@ personInputEl.addEventListener("click", function () {
 btnReset.addEventListener("click", function () {
   this.style.transform = "scale(0.99) translateZ(-5px)";
   errorEl.style.display = "none";
+  customInputEl.style.border = "none";
   personInputEl.style.border = "none";
   init();
   billInputEl.style.border = "none";
